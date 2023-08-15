@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+
+@media (min-width: 320px){
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior:smooth;
+}
+
+:root{
+    --color-primary:#904436;
+    --color-secundary:#f9f5f0;
+    --title-color:#ffff;
+    --text-Color:#777;
+}
+
+.container{
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+.container_hero{
+    min-height: 100px;
+    height: 0vh;
+    background-image: linear-gradient(to top, #c7908183 0%, #dfa57985 100%),  url(../img/karly-jones-2ph_5F1J8dc-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    --state-close: scale(0);
+    --state-hamburguer: scale(1);
+    --state-menu: translate(-100%);
+    padding: 40px 0;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: repeat(2, max-content);
+}
+
+.navbar:target{
+    --state-menu: translate(0);
+    --state-close: scale(1);
+    --state-hamburguer: scale(0);
+}
+
+.nav_log{
+    width: 100px;
+    z-index: 1;
+}
+
+.nav_ico{
+    width: 40%;
+}
+
+.nav_hamburguer,
+.nav_close{
+    cursor: pointer;
+    grid-column: -2/-1;
+    grid-row: 1/2;
+    transition: .4s transform;
+}
+
+.nav_hamburguer{
+    transform: var(--state-hamburguer);
+}
+
+.nav_close{
+    transform: var(--state-close);
+}
+
+.nav_icon{
+    width: 40px;
+}
+
+.nav_menu{
+    background-color:var(--color-primary);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 1em;
+    transform: var(--state-menu);
+    transition: .3s transform;    
+}
+
+.nav_item{
+    list-style: none; 
+    padding-top: 2em;
+}
+
+.nav_link{
+    text-decoration: none;
+    color: var(--title-color) ;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2px; 
+}
+
+.container_logo{
+    text-align: center; 
+}
+
+.container_logo h1{
+    color: var(--title-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+}
+
+/* CONTACT */
+
+.content{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.contact{
+    display: grid;
+    align-items: center;
+    gap: 1rem;
+
+}
+.product_title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.contact-in{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact__text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact__text p{
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+} 
+
+.contact-map{
+    width: 100%;
+    height: auto;
+    flex: 50%;
+}
+
+.contact-map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.contact-form{
+    padding: 2rem;
+}
+
+.contact-form form{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-self: center;
+    gap: 1rem;
+}
+
+.contact-form-txt{
+    width: 100%;
+    height: 2.5rem;
+    border: 1px solid #bcbcbc;
+    border-radius: 0.5rem; 
+    padding: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-form-textarea{
+    width: 100%;
+    height: auto;
+    border: 1px solid #bcbcbc;
+    border-radius: 0.5rem; 
+    padding: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-link{
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    background-color:var(--color-primary) ;
+    color:var(--title-color);
+    padding: 0.8rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px 5px 0px rgba(92, 91, 91, 0.522);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* INFORMATION */
+
+.information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.content-information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-img{
+    position: relative;
+    z-index: -1;
+}
+
+.container-img img{
+    width: 100%;
+}
+
+.content-information h3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight:800;
+    color: var(--color-primary);
+    text-align: center;
+    padding: 0 0.5rem;
+}
+
+.content-information p{
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400; 
+}
+
+.content-information .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    gap: 1rem;
+}
+
+.info .info-item{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+}
